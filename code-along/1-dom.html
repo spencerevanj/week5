@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIEI-451: The DOM</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <script src="1-dom.js"></script>
+</head>
+
+<body class="p-8">
+  <div class="container mx-auto space-y-8">
+    <div>
+      <h1 class="text-4xl">Lesson 1: The DOM</h1>
+      <table class="table-auto border-collapse border-2 border-gray-500">
+        <tr>
+          <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../index.html">Home</a></td>
+          <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../code-along/1-dom.html">Code
+              Along</a>
+          </td>
+          <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../practice/1-dom.html">Practice</a>
+          </td>
+          <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../reference/1-dom.html">Reference</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="fun-times font-bold text-purple-500 text-3xl">
+      Fun times!
+    </div>
+
+    <div>
+      <span class="even-more-fun font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+        Even more fun times!
+      </span>
+    </div>
+
+    <div id="grogu" class="border-pink-500 border-4 w-1/2">
+      <img src="../images/grogu.jpg">
+    </div>
+
+    <div>
+      <input type="text" id="favorite-thing" value="tacos" class="my-2 p-2 w-64 border-4 border-gray-400 rounded shadow-xl focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+    </div>
+
+    <div>
+      <ul class="movies-to-watch list-disc list-inside text-xl">
+        <li>Die Hard</h1>
+        <li>Robocop</li>
+        <li>Bride of Chucky</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

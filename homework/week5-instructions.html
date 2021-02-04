@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIEI-451: Week 3 Homework Instructions</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+    rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+</head>
+
+<body class="p-8 line-numbers">
+  <div class="container mx-auto">
+    <h1 class="text-4xl my-4">Week 5 Homework</h1>
+    <div class="space-y-4">
+      <p>Your hot new rideshare startup, Noober, is a huge success. The ride requests are pouring in. But your drivers are complaining that it's taking too long to look through all the rides. You need a quick solution and after a few meetings, the team has determined the quickest feature to implement will be buttons at the top of the rides list to filter the list by level of service.
+      <h3 class="text-xl font-bold">Getting Started</h3>
+      <p>Begin by heading over to <a href="https://github.com/kiei451-winter2021/noober-week5" class="text-pink-500 underline">the starter project</a> – select "Use this template", then create a repository in your own GitHub account called <span class="bg-orange-100 text-red-400 font-mono p-1">hw5</span>. Clone this project and open it in VSCode.</p>
+      <p>Open <span class="bg-orange-100 text-red-400 font-mono p-1">index.html</span> in Chrome. You'll notice your application is very similar to where you left off last week, i.e. the full list of all active ride requests in the database. Your designers have added the level of service button filters at the top, but they don't do anything yet when clicked.</p>
+
+      <h3 class="text-xl font-bold">The Goal</h3>
+      <p>
+        On page load, no ride data will appear. Instead, you should see an "All Rides" button, a button for each level of service<!-- , as well as an "Unassigned Rides" button -->.
+        When a user (i.e. driver) clicks on each button, the list of rides should appear just as it did last week, except filtered:
+      </p>
+      <ul class="list-disc list-inside">
+        <li>"All Rides" should display all rides</li>
+        <li>Each level of service button should filter the rides by the given level of service</li>
+        <!-- <li>"Unassigned Rides" should only display rides without a driver listed</li> -->
+      </ul>
+      <p>
+        The ride data can be retrieved from our "API" endpoint found at the URL <a href="https://kiei451.com/api/rides.json" class="text-pink-500 underline">https://kiei451.com/api/rides.json</a>.
+        The code to render the html of all the rides has already been provided in a <span class="bg-orange-100 text-red-400 font-mono p-1">renderRides()</span> function.
+        Your job is to add an event listener for each button, and when the event occurs, fetch the data, filter out any undesired rides based on the selected filter, and then call the <span class="bg-orange-100 text-red-400 font-mono p-1">renderRides()</span> function, passing an array of the remaining rides as the expected argument.
+      </p>
+      <h3 class="text-xl font-bold">Rubric</h3>
+      <p><em>The rubric below is intended as a guide to a solution. But there are many possible solutions. What ultimately matters is that your application successfully displays the expected/filtered ride data when each button is clicked.</em></p>
+      <ol class="list-decimal list-inside">
+        <li>(1 point) Add an event listener to the "All Rides" button, so that when it is clicked, there is some output in the console to indicate which button was clicked.</li>
+        <li>
+          (1 point) When the event occurs:
+          <ol class="list-decimal list-inside ml-8">
+            <li>request the ride data from our "API"</li>
+            <li>pass the array of rides to the provided <span class="bg-orange-100 text-red-400 font-mono p-1">renderRides()</span> function to display all the rides (same as they appeared at the end of last week's assignment)</li>
+          </ol>
+        <li>(2 points) Add an event listener to the "Noober Purple" button, so that when it is clicked, there is some output in the console to indicate which button was clicked.</li>
+        <li>
+          (4 points) When the event occurs:
+          <ol class="list-decimal list-inside ml-8">
+            <li>request the ride data from our "API"</li>
+            <li>create a new empty array</li>
+            <li>loop through the rides and for each ride, use the provided <span class="bg-orange-100 text-red-400 font-mono p-1">levelOfService()</span> function to determine the service level, and use <span class="bg-orange-100 text-red-400 font-mono p-1">newArray.push(ride)</span> to add "Noober Purple" rides into the new array</li>
+            <li>lastly, pass the new array of filtered rides to the <span class="bg-orange-100 text-red-400 font-mono p-1">renderRides()</span> function</li>
+          </ol>
+        <li>(2 points) Repeat steps 3 & 4 for the other 3 level of service button filters.</li>
+      </ol>
+      <h3 class="text-xl font-bold">Optional Challenges</h3>
+      <p><em>These are not graded, but if you want to stretch your skills...</em></p>
+      <p>Challenge 1: It would be a nicer UX (User Experience) if when a button is selected, it was clear to the user. In the event listener, remove/add a Tailwind class for the clicked button so that its background color appears to be active. However, make sure to first reset all the buttons to their original background color (or else it will be confusing which button was selected).</p>
+      <!-- <p>Challenge 2: Instead of having the code for 6 individual event listeners (1 for each button), can you refactor the code to use a loop and only write code for 3 event listeners?  Or even just 1?</p> -->
+      <p>Challenge 2: Instead of having the code for 5 individual event listeners (1 for each button), can you refactor the code to use a loop and only write code for 2 event listeners?  Or even just 1?</p>
+      <h3 class="text-xl font-bold">Guidelines for Submission</h3>
+      <p>All your work should take place in <span class="bg-orange-100 text-red-400 font-mono p-1">noober.js</span>; i.e. that should be the only file that's modified from the original project template. Your finished product should live in your GitHub account at <span class="bg-orange-100 text-red-400 font-mono p-1">https://github.com/&lt;your GitHub username&gt;/hw5</span>, and <strong>this URL should be submitted as the "website URL" for this assignment in Canvas.</strong></p>
+    </div>
+  </div>
+</body>
+
+</html>

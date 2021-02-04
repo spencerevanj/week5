@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIEI-451: The DOM</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <script src="2-events.js"></script>
+</head>
+
+<body class="p-8">
+  <div class="container mx-auto">
+    <h1 class="text-4xl">Practice 2: Events</h1>
+
+    <div id="casino grid grid-flow-row">
+      <h2 class="text-2xl mb-8">KIEI-451 Casino!</h2>
+
+      <div class="dice flex justify-center space-x-8">
+        <img src="../images/dice/3.png" class="die w-1/2 md:w-1/6">
+        <img src="../images/dice/4.png" class="die w-1/2 md:w-1/6">
+      </div>
+
+      <div class="md:flex md:space-x-4 justify-center my-8">
+        <form>
+          <label for="player">Player:</label>
+          <input type="text" id="player" name="player" class="my-2 p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+        </form>
+
+        <div>
+          <a href="#" id="roll-button" class="inline-block my-2 text-white bg-purple-500 rounded px-4 py-2">Roll</a>
+        </div>
+      </div>
+
+      <ul class="result"></ul>
+    </div>
+
+  </div>
+</body>
+
+</html>

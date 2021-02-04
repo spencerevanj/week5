@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Weathernator</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+    <h1 class="text-xl bg-black py-4 px-8">
+      <a href="index.html" class="mx-auto container">
+        <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-green-500">The Weathernator</span>
+      </a>
+    </h1>
+  </div>
+
+  <div class="mx-auto container">
+    <div class="flex">
+      <div class="w-2/5 my-16 p-8 space-y-4">
+        <div><a href="https://weatherapi.com" id="chicago-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Chicago</a></div>
+        <div><a href="https://weatherapi.com" id="los-angeles-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Los Angeles</a></div>
+        <div><a href="https://weatherapi.com" id="moscow-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Moscow</a></div>
+        <div><a href="https://weatherapi.com" id="new-york-city-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">New York City</a></div>
+        <div><a href="https://weatherapi.com" id="paris-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Paris</a></div>
+        <div><a href="https://weatherapi.com" id="rome-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Rome</a></div>
+        <div><a href="https://weatherapi.com" id="singapore-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Singapore</a></div>
+        <div><a href="https://weatherapi.com" id="tokyo-forecast" class="forecast-button inline-block border bg-blue-500 text-white rounded px-4 py-2">Tokyo</a></div>
+
+        <form class="weather-form">
+          <label for="location">Other Location:</label>
+          <div class="flex">
+            <input type="text" name="location" id="location" class="border border-gray-400 rounded p-2 mr-2">
+            <button class="block text-center border bg-green-500 text-white rounded px-4 py-2">✔️</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="w-3/5 mt-16 p-8">
+        <h1 class="forecast-header text-2xl text-center text-green-500 underline mb-8">Forecast</h1>
+        <div class="forecast md:flex justify-between">
+          <!-- Harcoded HTML to replace with Javascript -->
+          <!-- <div class="text-center space-y-2">
+            <img src="https://cdn.weatherapi.com/weather/64x64/day/311.png" class="mx-auto">
+            <h1 class="text-2xl text-bold text-gray-500">2021-01-01</h1>
+            <h2 class="text-xl">33.4 - 40.6</h2>
+            <p class="text-gray-500">Light freezing rain</h1>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="week5.js"></script>
+</body>
+
+</html>

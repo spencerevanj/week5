@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIEI-451: Events</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <script src="2-events.js"></script>
+</head>
+
+<body class="p-8">
+  <div class="container mx-auto">
+    <h1 class="text-4xl">Lesson 2: Events</h1>
+    <table class="table-auto border-collapse border-2 border-gray-500">
+      <tr>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../index.html">Home</a></td>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../code-along/1-dom.html">Code
+            Along</a>
+        </td>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../practice/1-dom.html">Practice</a>
+        </td>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../reference/1-dom.html">Reference</a>
+        </td>
+      </tr>
+    </table>
+
+    <div class="border border-gray-400 bg-gray-200 p-4 my-4">
+      Try it out! In the corresponding JavaScript file, <span
+        class="bg-orange-100 text-red-400 font-mono p-1">code-along/2-events.js</span>,
+      try setting the value of the variable <span class="bg-orange-100 text-red-400 font-mono p-1">output</span>,
+      to see how it affects the outcome of this page, when loaded or refreshed. It's also highly recommended to load
+      this page with Chrome's JavaScript Console tab open. Tip: you can always use the
+      <span class="bg-orange-100 text-red-400 font-mono p-1">console.log</span> function to write output to Chrome's
+      JavaScript console.
+    </div>
+
+    <div class="bg-gray-800 text-gray-100 my-4 p-8">
+      <p class="uppercase text-sm font-bold mb-4 text-gray-600">Output</p>
+      <div class="output">
+        <!-- Placeholder for the output of our JavaScript output variable -->
+      </div>
+    </div>
+
+    <!-- Beginning of CLICK EVENTS feature -->
+    <hr>
+    <h2 class="text-2xl text-center mt-8">Click Events</h2>
+    <div class="md:flex md:space-x-4 justify-center my-8">
+      <a href="#" class="click-me-button inline-block my-2 text-white bg-purple-500 rounded px-4 py-2">Click me!</a>
+      <a href="https://google.com" class="google-link inline-block my-2 bg-orange-100 text-red-400 font-mono px-4 py-2">Google</a>
+    </div>
+    <!-- End of CLICK EVENTS feature -->
+
+    <!-- Beginning of CHANGE EVENTS feature -->
+    <hr>
+    <h2 class="text-2xl text-center mt-8">Change Events</h2>
+    <div class="md:flex md:space-x-4 justify-center my-8">
+      <form>
+        <label for="firstName">Name:</label>
+        <input type="text" id="firstName" name="firstName" class="my-2 p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+      </form>
+
+      <div id="greet" class="my-2 p-2"></div>
+    </div>
+    <!-- End of CHANGE EVENTS feature -->
+
+  </div>
+</body>
+
+</html>

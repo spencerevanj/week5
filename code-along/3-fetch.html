@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIEI-451: The DOM</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <script src="3-fetch.js"></script>
+</head>
+
+<body class="p-8">
+  <div class="container mx-auto">
+    <h1 class="text-4xl">Lesson 3: Fetch</h1>
+    <table class="table-auto border-collapse border-2 border-gray-500">
+      <tr>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../index.html">Home</a></td>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../code-along/1-dom.html">Code
+            Along</a>
+        </td>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../practice/1-dom.html">Practice</a>
+        </td>
+        <td class="px-4 py-2 border"><a class="text-blue-500 underline" href="../reference/1-dom.html">Reference</a>
+        </td>
+      </tr>
+    </table>
+
+    <div class="border border-gray-400 bg-gray-200 p-4 my-4">
+      Try it out! In the corresponding JavaScript file, <span
+        class="bg-orange-100 text-red-400 font-mono p-1">code-along/3-fetch.js</span>,
+      try setting the value of the variable <span class="bg-orange-100 text-red-400 font-mono p-1">output</span>,
+      to see how it affects the outcome of this page, when loaded or refreshed. It's also highly recommended to load
+      this page with Chrome's JavaScript Console tab open. Tip: you can always use the
+      <span class="bg-orange-100 text-red-400 font-mono p-1">console.log</span> function to write output to Chrome's
+      JavaScript console.
+    </div>
+    <div class="bg-gray-800 text-gray-100 my-4 p-8">
+      <p class="uppercase text-sm font-bold mb-4 text-gray-600">Output</p>
+      <div class="output">
+        <!-- Placeholder for the output of our JavaScript output variable -->
+      </div>
+    </div>
+
+    <h2 class="text-2xl text-center mt-8">Fetch</h2>
+    <div class="flex justify-center my-8">
+      <form class="bitcoin-form">
+        <label for="amount">Enter amount of Bitcoin:</label>
+        <input type="text" name="amount" id="amount" class="border border-gray-400 rounded p-2 mr-2">
+        <button class="col-start-2 text-center border bg-green-500 text-white rounded px-4 py-2">Submit</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+
+</html>
