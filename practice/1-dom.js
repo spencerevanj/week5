@@ -9,6 +9,16 @@ window.addEventListener('DOMContentLoaded', function () {
   // 3. replace the element's inner html with new html using the dice values above
 
   // ⬇️ ⬇️ ⬇️ YOUR CODE GOES HERE ⬇️ ⬇️ ⬇️
+let die1 = getRandomInt(6)
+let die2 = getRandomInt(6)
+
+let dice = document.querySelector('.dice')
+
+
+
+dice.innerHTML = `
+  <img src="../images/dice/${die1}.png" class="die w-1/2 md:w-1/6">
+  <img src="../images/dice/${die2}.png" class="die w-1/2 md:w-1/6">`
 
   // ⬆️ ⬆️ ⬆️ YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE ⬆️ ⬆️ ⬆️
 })
